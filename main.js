@@ -36,10 +36,15 @@ document.addEventListener("DOMContentLoaded", function() {
         currentScreen.textContent = currentValue;
     })
 
+    //get the value of the claculated numbers
     equal.addEventListener('click', function(){
         calculate()
         previousScreen.textContent = '';
-        currentScreen.textContent = previousValue;
+        if(previousValue.length <= 5){
+            currentScreen.textContent = currentValue
+        } else {
+            currentScreen.textContent = previousValue.slice(0,5) + "...";
+        }
     })
 })
 
