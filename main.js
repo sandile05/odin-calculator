@@ -26,6 +26,15 @@ document.addEventListener("DOMContentLoaded", function() {
         previousScreen.textContent = previousValue + " " + operator;
         currentScreen.textContent = currentValue;
     }))
+
+    //remove all text from the screen when C is clicked
+    clear.addEventListener('click', function(){
+        previousValue = "";
+        currentValue = "";
+        operator = "";
+        previousScreen.textContent = currentValue;
+        currentScreen.textContent = currentValue;
+    })
 })
 
 
